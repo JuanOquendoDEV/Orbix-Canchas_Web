@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed left-0 right-0 bg-cyan-900 shadow-lg z-40 h-20 flex items-center transition-transform duration-300 ${
+      className={`fixed left-0 right-0 bg-[#006f79] shadow-lg z-40 h-20 flex items-center transition-transform duration-300 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center font-bold text-white">
             <Image
-              src="/Logo_Orbix.png"
+              src=""
               alt="Logo Orbix"
               width={120}
               height={120}
@@ -56,30 +56,30 @@ const Navbar: React.FC = () => {
           <div
             className={`flex-col lg:flex-row lg:flex items-center gap-2 ${
               isOpen ? "flex" : "hidden"
-            } absolute lg:static top-20 left-0 w-full h-60 lg:w-auto bg-cyan-900 lg:bg-transparent shadow-lg lg:shadow-none z-40`}
+            } absolute lg:static top-20 left-0 w-full h-60 lg:w-auto bg-[#006f79] lg:bg-transparent shadow-lg lg:shadow-none z-40`}
           >
             <a
               href="#nosotros"
-              className="block px-5 py-2 text-purple-300 hover:text-neutral-300"
+              className="block px-5 py-2 text-lime-200 hover:text-neutral-300"
             >
               Nosotros
             </a>
             <a
               href="#productos"
-              className="block px-5 py-2 text-purple-300 hover:text-neutral-300"
+              className="block px-5 py-2 text-lime-200 hover:text-neutral-300"
             >
               Canchas
             </a>
             <a
               href="#contacto"
-              className="block px-5 py-2 text-purple-300 hover:text-neutral-300"
+              className="block px-5 py-2 text-lime-200 hover:text-neutral-300"
             >
               Contacto
             </a>
 
             <a
               href="#auth"
-              className="ml-0 lg:ml-4 mt-2 lg:mt-0 px-6 py-2 rounded-full bg-fuchsia-600 text-white font-semibold hover:bg-fuchsia-700 transition"
+              className="ml-0 lg:ml-4 mt-2 lg:mt-0 px-6 py-2 rounded-full bg-cyan-900 text-lime-200 font-semibold hover:bg-[#87AECE] transition"
             >
               Iniciar Sesión / Registrarse
             </a>
