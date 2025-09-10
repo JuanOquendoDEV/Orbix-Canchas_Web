@@ -1,4 +1,6 @@
 
+
+
 import { CarouselPlugin } from "@/components/ui/carousel-plugin";
 import AboutUs from "../components/AboutUs";
 import Navbar from "../components/Navbar";
