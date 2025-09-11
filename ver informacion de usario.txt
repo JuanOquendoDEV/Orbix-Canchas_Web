@@ -1,0 +1,13 @@
+
+
+Para ver la informacion de un usuario directamente en la pagina desde consola se puede utilizar un hook 
+que viene con clerk que es el siguiente: 
+
+este hook solo se puede utilizar en el cliente por lo que se le debe de decir que lo utilice
+
+
+"use client"
+
+
+cont user = useUser();
+console.log(user)
