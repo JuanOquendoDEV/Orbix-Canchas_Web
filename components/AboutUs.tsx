@@ -1,12 +1,12 @@
 "use client"
 
 import { ReservasCanchasChart } from "@/components/ui/chart-line-label"
-import AboutUs2 from "./AboutUs2"
+
 
 
 export default function AboutUs() {
   return (
-    <section id= "Nosotros" className="mt-2 py-30 px-6 md:px-12  text-lime-100" >
+    <section id= "Nosotros" className="mt-2  py-30 px-6 md:px-17  text-lime-100" >
       <div className=" grid md:grid-cols-2 gap-20 items-center text-lime-100">
 
         <div>
@@ -32,7 +32,7 @@ export default function AboutUs() {
      
       </div>
        <div className=" mt-20">
-       <AboutUs2/>
+       
 
        </div>
 
