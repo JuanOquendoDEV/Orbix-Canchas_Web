@@ -3,6 +3,13 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import {
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -77,12 +84,25 @@ const Navbar: React.FC = () => {
               Contacto
             </a>
 
-            <a
-              href="#auth"
-              className="ml-0 lg:ml-4 mt-2 lg:mt-0 px-6 py-2 rounded-full bg-cyan-900 text-lime-200 font-semibold hover:bg-[#87AECE] transition"
-            >
-              Iniciar Sesión / Registrarse
-            </a>
+            <div className="ml-0 lg:ml-4 mt-2 lg:mt-0">
+              <SignedIn>
+                <UserButton afterSignOutUrl="/" />
+              </SignedIn>
+              <SignedOut>
+                <div className="flex items-center gap-4">
+                  <SignInButton mode="modal">
+                    <button className="px-6 py-2 rounded-full bg-cyan-900 text-lime-200 font-semibold hover:bg-[#87AECE] transition">
+                      Iniciar Sesión
+                    </button>
+                  </SignInButton>
+                  <SignUpButton mode="modal">
+                    <button className="px-6 py-2 rounded-full bg-cyan-900 text-lime-200 font-semibold hover:bg-[#87AECE] transition">
+                      Registrarse
+                    </button>
+                  </SignUpButton>
+                </div>
+              </SignedOut>
+            </div>
           </div>
         </div>
       </div>
