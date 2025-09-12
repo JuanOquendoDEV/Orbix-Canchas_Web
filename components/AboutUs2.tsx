@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 export default function AboutUs2() {
   return (
-    <section className="bg-[#006f79] w-full py-20 px-6 md:px-12 text-lime-100">
+    <section className="bg-[#006f79] w-8xl py-20  md:px-1 text-lime-100">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
         
         <motion.div 
@@ -16,16 +16,16 @@ export default function AboutUs2() {
         >
           <h2 className="text-4xl font-bold mb-8">Buscamos lo mejor para ti</h2>
           <ul className="flex flex-col gap-6 text-lg">
-            <li className="bg-emerald-700 p-4 rounded-xl shadow-md">
+            <li className="bg-emerald-700 text-blue-100 p-4 rounded-xl shadow-md">
               Amplia variedad de canchas para fútbol, baloncesto y más.
             </li>
-            <li className="bg-emerald-700 p-4 rounded-xl shadow-md">
+            <li className="bg-emerald-700 text-blue-100 p-4 rounded-xl shadow-md">
               Reservas rápidas y seguras en cualquier momento.
             </li>
-            <li className="bg-emerald-700 p-4 rounded-xl shadow-md">
+            <li className="bg-emerald-700 text-blue-100 p-4 rounded-xl shadow-md">
               Instalaciones modernas y bien cuidadas.
             </li>
-            <li className="bg-emerald-700 p-4 rounded-xl shadow-md">
+            <li className="bg-emerald-700  text-blue-100 p-4 rounded-xl shadow-md">
               Atención personalizada y promociones exclusivas.
             </li>
           </ul>

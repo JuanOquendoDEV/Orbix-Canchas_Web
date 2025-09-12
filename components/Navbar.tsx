@@ -66,13 +66,13 @@ const Navbar: React.FC = () => {
             } absolute lg:static top-20 left-0 w-full h-60 lg:w-auto bg-[#006f79] lg:bg-transparent shadow-lg lg:shadow-none z-40`}
           >
             <a
-              href="#nosotros"
+              href="#Nosotros"
               className="block px-5 py-2 text-lime-200 hover:text-neutral-300"
             >
               Nosotros
             </a>
             <a
-              href="#productos"
+              href="#Canchas"
               className="block px-5 py-2 text-lime-200 hover:text-neutral-300"
             >
               Canchas
