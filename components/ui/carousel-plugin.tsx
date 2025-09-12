@@ -1,9 +1,10 @@
 "use client"
 
 import * as React from "react"
+import Image from "next/image"
 import Autoplay from "embla-carousel-autoplay"
 
-import { Card, CardContent } from "@/components/ui/card"
+import { Card } from "@/components/ui/card"
 import {
   Carousel,
   CarouselContent,
@@ -17,28 +18,41 @@ export function CarouselPlugin() {
     Autoplay({ delay: 2000, stopOnInteraction: true })
   )
 
+
+  const images = [
+    "/Carousel1.jpg",
+    "/Carousel2.jpg",
+    "/images/slide3.jpg",
+    "/images/slide4.jpg",
+    "/images/slide5.jpg",
+  ]
+
   return (
-   <Carousel
-  plugins={[plugin.current]}
-  className="w-full h-screen mt-10  overflow-hidden"
-  onMouseEnter={plugin.current.stop}
-  onMouseLeave={plugin.current.reset}
->
-  <CarouselContent className="w-full h-screen content-center ">
-    {Array.from({ length: 5 }).map((_, index) => (
-      <CarouselItem key={index} className="w-full h-full p-2">
-        <Card className="w-full h-[80vh]  ">
-          <CardContent className="flex items-center justify-center w-full h-full bg-white">
-            <span className="text-4xl font-semibold">{index + 1}</span>
-          </CardContent>
-        </Card>
-      </CarouselItem>
-    ))}
-  </CarouselContent>
+    <Carousel
+      plugins={[plugin.current]}
+      className="w-full h-screen mt-10 overflow-hidden"
+      onMouseEnter={plugin.current.stop}
+      onMouseLeave={plugin.current.reset}
+    >
+      <CarouselContent className=" relative w-full h-screen content-center">
+        {images.map((src, index) => (
+          <CarouselItem key={index} className="w-full h-full p-2">
+            <Card className= "w-full h-[80vh] overflow-hidden rounded-2xl shadow-lg">
+              <Image
+                src={src}
+                alt={`Slide ${index + 1}`}
+                width={1930}
+                height={1280}
+                className="object-cover w-full h-full"
+                priority={index === 0}
+              />
+            </Card>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
 
-  <CarouselPrevious className="bg-transparent hover:bg-gray-800/50 text-white" />
-  <CarouselNext className="bg-transparent hover:bg-gray-800/50 text-white"/>
-</Carousel>
-
+      <CarouselPrevious className="bg-transparent hover:bg-gray-800/50 text-white" />
+      <CarouselNext className="bg-transparent hover:bg-gray-800/50 text-white" />
+    </Carousel>
   )
 }

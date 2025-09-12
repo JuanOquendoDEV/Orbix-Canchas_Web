@@ -1,15 +1,20 @@
 "use client"
 
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 export default function AboutUs2() {
   return (
-    <section className=" bg-[#006f79] bg rounded-4xl shadow-2xl w-full py-20 px-6 md:px-12  text-lime-100">
-      <div className="max-w-19xl mx-auto grid md:grid-cols-2 gap-12 ">
+    <section className="bg-[#006f79] w-full py-20 px-6 md:px-12 text-lime-100">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
         
-        
-        <div>
-          <h2 className="text-4xl text font-bold mb-8">Buscamos lo mejor para ti</h2>
+        <motion.div 
+          initial={{ opacity: 0, x: -50 }} 
+          whileInView={{ opacity: 1, x: 0 }} 
+          transition={{ duration: 0.8 }} 
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl font-bold mb-8">Buscamos lo mejor para ti</h2>
           <ul className="flex flex-col gap-6 text-lg">
             <li className="bg-emerald-700 p-4 rounded-xl shadow-md">
               Amplia variedad de canchas para fútbol, baloncesto y más.
@@ -24,17 +29,24 @@ export default function AboutUs2() {
               Atención personalizada y promociones exclusivas.
             </li>
           </ul>
-        </div>
+        </motion.div>
 
        
-        <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-lg">
+        <motion.div 
+          className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-lg"
+          initial={{ opacity: 0, x: 50 }} 
+          whileInView={{ opacity: 1, x: 0 }} 
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <Image
-            src="/Basket.avif" 
+            src="/Football.avif"
             alt="Implementos deportivos"
             fill
             className="object-cover"
           />
-        </div>
+        </motion.div>
+
       </div>
     </section>
   )

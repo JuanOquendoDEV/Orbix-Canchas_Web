@@ -14,10 +14,10 @@ export default function Home() {
       <CarouselPlugin/>
       </main>
       
-      <>
+      <div>
       <AboutUs/>
      
-      </>
+      </div>
 
       <div >
       
